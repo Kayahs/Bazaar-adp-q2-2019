@@ -3,7 +3,8 @@ const authenticate = require('../authenticate')
 module.exports = {
   Query: {
     async test(parent, _, {postgres}, info){
-      return {name: 'wooooo' }
+      const getUsers = await postgres.query('SELECT * FROM boilerplate.users')
+      return getUsers.rows[0].fullname
     }
     // async user(parent, { id }, { app, req, postgres }, info) {
     //   authenticate(app, req)

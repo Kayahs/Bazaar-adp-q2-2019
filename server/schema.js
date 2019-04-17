@@ -7,17 +7,17 @@ module.exports = gql`
     fullname: String
   }
   type Query {
-  getAllUsers: [User],
-  user(id : ID): User,
-  test: Test
-  #TODO 
-}
-type Test {
-  name: String
-}
-# type Mutation {
-#   #TODO
-# }
+    getAllUsers: [User],
+    user(id : ID): User,
+    test: String!
+    #TODO 
+  }
+  type Test {
+    name: String
+  }
+  # type Mutation {
+  #   #TODO
+  # }
 
 `
 

@@ -5,6 +5,6 @@ exports.up = pgm => {
       "id" SERIAL PRIMARY KEY,
       "fullname" TEXT NOT NULL
     );
-  `),
+  `)
   /* TODO: add more migrations */
 };
